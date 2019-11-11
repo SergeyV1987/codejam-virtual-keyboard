@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.textArea {
+    border: 2px solid gray;
+    width: 920px;
+    height: 150px;
+    margin: 50px auto;
+    resize: none;
+}
+
+.keyBoard {
+    margin: 0 auto;
+}
+
+button {
+    width: 60px;
+    height: 60px;
+    margin: 2px 0 0 2px;
+    border-style: outset;
+    cursor: pointer;
+}
+
+button:active, .chosen {
+    border-width: 1px;
+    border-style: outset;
+    border-color: buttonface;
+    border-radius: 15px;
+}
+
+button:focus {
+    outline: none;
+}
+
+span>span {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.rows {
+    display: flex;
+}
+
+.Space {
+    width: 432px;
+}
+
+.ShiftLeft, .ShiftRight, .CapsLock, .Backspace, .Enter {
+    width: 122px;
+}
