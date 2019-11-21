@@ -1,5 +1,5 @@
-const store = localStorage.getItem('lang');
-let langEng = store === 'eng';
+const savedLang = localStorage.getItem('lang');
+let langEng = savedLang === 'eng';
 localStorage.setItem('lang', langEng ? 'eng' : 'ru');
 
 const textArea = document.createElement('textarea');
@@ -119,7 +119,7 @@ const onButtonClick = (event) => {
 };
 
 const onKeyboardEvent = (event) => {
-  const chosenBtn = event.code && document.querySelector(`.${event.code}`);
+  const chosenBtn = event.code && document.querySelector(`.${(event.code).toLowerCase()}`);
   if (chosenBtn) {
     event.preventDefault();
     chosenBtn.click();
@@ -139,7 +139,7 @@ for (let i = 0; i < keyCodes.length; i += 1) {
 
   for (let j = 0; j < keyCodes[i].length; j += 1) {
     const key = document.createElement('button');
-    key.classList.add(keyCodes[i][j]);
+    key.classList.add((keyCodes[i][j]).toLowerCase());
 
     const ru = document.createElement('span');
     ru.classList.add('ru');
@@ -179,7 +179,7 @@ document.querySelectorAll('button').forEach((button) => {
 });
 
 document.addEventListener('keydown', (event) => {
-  const chosenBtn = event.code && document.querySelector(`.${event.code}`);
+  const chosenBtn = event.code && document.querySelector(`.${(event.code).toLowerCase()}`);
   if (chosenBtn) {
     event.preventDefault();
     chosenBtn.classList.add('chosen');

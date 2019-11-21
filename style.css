@@ -46,10 +46,10 @@ span>span {
     display: flex;
 }
 
-.Space {
+.space {
     width: 432px;
 }
 
-.ShiftLeft, .ShiftRight, .CapsLock, .Backspace, .Enter {
+.shiftleft, .shiftright, .capslock, .backspace, .enter {
     width: 122px;
 }
